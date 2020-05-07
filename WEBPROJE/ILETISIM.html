@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    
+  <head>
+      
+    <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="stil.css">    
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+    </head>
+    <body style="background-color: #0c2c37">
+         <section id="nav-bar" style="background-color: gold; color: black;">  
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: gold; color: black;">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml auto navbartext">
+         <li class="nav-item">
+        <a class="nav-link"href="HAKKIMDA.html" target="_blank" style="color: #00009b"><strong>HAKKINDA&#160;&#160;&#160;&#160;&#160;&#160;</strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="EGITIMBILGILERI.html" target="_blank"style="color: #00009b"><strong>EGITIM BILGILERİ&#160;&#160;&#160;&#160;&#160;&#160;</strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="SEHRIM.html" target="_blank" style="color: #00009b;"><strong>SEHRİM&#160;&#160;&#160;&#160;&#160;&#160;</strong></a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="MIRASIMIZ.html" target="_blank" style="color: #00009b"><strong>MİRASIMIZ&#160;&#160;&#160;&#160;&#160;&#160;</strong></a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="ILETISIM.html" target="_blank" style="color: #ac5353"><strong>İLETİŞİM&#160;&#160;&#160;&#160;&#160;&#160;</strong></a>
+      </li> 
+	         <li class="nav-item">
+        <a class="nav-link" href="Login.html" target="_blank" style="color: #00009b"><strong>Login&#160;&#160;&#160;&#160;&#160;&#160;</strong></a>
+      </li> 
+    </ul>
+  </div>
+</nav>   
+</section> 
+
+
+<script type="text/javascript">
+function askerlikdurumu(deger)
+{
+if(document.getElementById(deger).value=="Erkek")
+{ document.getElementById("askerlik").type="text";}
+else
+{document.getElementById("askerlik").type="hidden";}
+
+
+}
+
+function ackapat(deger)
+{
+if(document.getElementById(deger).type=="text")
+{ document.getElementById(deger).type="hidden";}
+else
+{document.getElementById(deger).type="text";}
+
+
+}
+
+function kapat()
+{
+document.getElementById("askerlik").value="";
+document.getElementById("digerdil").value="";
+document.getElementById("digerbeceri").value="";
+document.getElementById("askerlik").type="hidden";
+document.getElementById("digerdil").type="hidden";
+document.getElementById("digerbeceri").type="hidden";
+}
+</script>
+       
+
+<form method="GET" action="goster.php" target="_blank" style="color: gold;">
+<div class="container">
+<section>
+    <div class="divbosluk">
+</div>
+<div>Kişisel Bilgiler</div>
+<table width="450"  height="220">
+    <div class="divbosluk">
+</div>
+  <tr>
+    <td class="tabletext" width="145">Ad</td>
+    <td width="300"><input name="ad" type="text" maxlength="40" placeholder="Adınızı giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td class="tabletext">Soyad</td>
+    <td><input name="soyad" type="text" placeholder="Soyadınızı giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td class="tabletext">Doğum Tarihi</td>
+    <td><input name="dt" type="date" required="required" /></td>
+  </tr>
+  <tr>
+    <td class="tabletext">Telefon</td>
+    <td><input name="numara" type="text" placeholder="(xxx) xxx xx xx" required="required" /></td>
+  </tr>
+  <tr>
+    <td class="tabletext">Mail Adresi</td>
+    <td><input name="mailadres" type="email" placeholder="Mail adresinizi giriniz." required="required" /></td>
+  </tr>
+  <tr>
+    <td class="tabletext">Cinsiyet</td>
+    <td style="color: saddlebrown;">
+        <input id="erkek" name="cinsiyet" type="radio" value="Erkek" class="radyo" required="required" onclick="askerlikdurumu(this.id)" />Erkek
+        <input id="kadin" name="cinsiyet" type="radio" value="Kadın" class="radyo" required="required" onclick="askerlikdurumu(this.id)" />Kadın
+        <input id="askerlik" name="asker" type="hidden" placeholder="Askerlik durumunu giriniz." value="" />
+    </td>
+  </tr>
+</table>
+</section>
+<section>
+    <div class="divbosluk">
+</div>
+<div>Yabanci Dil Ve Uyruk</div>
+    <div class="divbosluk">
+</div>
+<table  width="500" height="200">
+  <tr>
+    <td class="tabletext">Yabancı Dil</td>
+    <td  style="color: saddlebrown;">
+        <input class="onay" name="check1" type="checkbox" value="ingilizce" />İngilizce
+    <input class="onay" type="checkbox" name="check2" value="almanca" />Almanca
+        <input class="onay" name="check3" type="checkbox" value="arapca" />Arapça
+        <input class="onay" name="" type="checkbox" value="" onclick="ackapat('digerdil')" />Diğer
+        <input id="digerdil" name="digerdil" type="hidden" placeholder="Diğer bildiğiniz dili giriniz." value="" />
+        <tr>
+    <td class="tabletext">Uyruk:</td>
+    <td>
+    <select name="uyruk" class="onay">
+      <option value="Turk" class="onay">Turk</option>
+      <option value="Rus" class="onay">Rus</option>
+      <option value="Alman">Alman</option>
+      <option value="Ingiliz">Ingiliz</option>
+        <option value="Azerbaycan">Azerbaycan</option>
+    </select></td> 
+  </tr>
+    </td>
+  </tr>
+</table>
+</section>
+    
+<aside>
+    <div class="divbosluk">
+</div>
+<div class="baslikkutu">Beceriler</div>
+<input class="onay" name="html" type="checkbox" value="" />Html<br />
+<input class="onay" name="css" type="checkbox" value="" />Css<br />
+<input class="onay" name="php" type="checkbox" value="" />Php<br />
+<input class="onay" name="aspnet" type="checkbox" value="" />Asp.Net<br />
+<input class="onay" name="" type="checkbox" onclick="ackapat('digerbeceri')" value="" />Diğer
+<input id="digerbeceri" name="digerbeceri" type="hidden" placeholder="Diğer becerinizi giriniz." value="" />
+</aside>
+<aside>
+<div class="divbosluk">
+</div>    
+<div class="baslikkutu">Mesajiniz</div>
+<textarea name="mesaj" id="mesaj" rows="20" cols="50"></textarea><br ><br >
+<input class="gonder"  type="submit" value="Gonder">
+<input class="gonder" name="" type="reset" onclick="kapat()" />
+</aside>
+<div class="divbosluk">
+</div>
+</div>   
+</form> 
+<footer id="dis_bolme1" class="metin1">
+        <div class="divbosluk">
+        </div>
+        <div class="ic_bolme1"><h3>HAKLAR:</h3>
+        <p>copyright 2020 © all rights reserved</p>
+        <p>Tüm haklar korunuyor</p>    
+        </div>
+
+
+        <div class="ic_bolme1">
+            <h3>Benimle iletişime geç:</h3> 
+            <p>Tel:&#160;&#160;  +90&#160;538&#160;373&#160;26&#160;63</p>
+            <p>Email:  &#160;&#160;meftun.yos@mail.ru</p>
+            <p>Adres:&#160;&#160;  Sakarya Serdiven üneversite cad. kemalpaşa mah.</p>
+        </div>
+
+
+            <div class="ic_bolme1" style="text-align: center; margin-top: 30px;">
+                <p><strong>bana mail gönder</strong></p>
+                <a href="mailto:meftun.yos@mail.ru"><img class="icon" src="img/23.png"></a>
+                
+                <a href="https://www.facebook.com"><img class="icon" src="img/24.png"></a>
+                <a href="https://www.instagram.com"><img class="icon" src="img/25.png"></a>
+                <a href="https://www.twitter.com"><img class="icon" src="img/26.png"></a>
+            </div>
+            </footer>        
+</body>
+</html>
