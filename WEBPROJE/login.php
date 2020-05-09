@@ -14,7 +14,7 @@ if(empty($_POST)==false)
     else
     {
     
-        header ("Location:login.html");
+        header ("Location:Login.html");
 
     }
 }
